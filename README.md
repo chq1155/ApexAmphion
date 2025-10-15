@@ -140,19 +140,17 @@ reward = generate.CompositeReward(...)
 sequences, scores = generate.sampling_trl(tokenizer, model, reward)
 ```
 
-## Testing & Validation
+## Citation
 
-- `python -m compileall amphion_rl amphion_sft` verifies that the Python sources compile.
-- Add unit tests for new functionality under `tests/` (not yet provided) and run with `pytest`.
-- `test.py` demonstrates the progress-bar utilities used during training.
+If you find this repository useful, please cite:
 
-## Notes & Best Practices
-
-- Ensure `macrel` binaries from the Conda environment are on your `PATH`; the property
-  reward runs Macrel in batch mode.
-- Check GPU utilization during PPO — the ESM encoder and classifier live on the same device.
-- Maintain consistent random seeds during experimentation via the `--seed` flag.
-
-## License
-
-Pending; please choose an open-source license before publishing the project publicly.
+```bibtex
+@article{cao2025deep,
+  title={A deep reinforcement learning platform for antibiotic discovery},
+  author={Cao, Hanqun and DT Torres, Marcelo and Zhang, Jingjie and Gao, Zijun and Wu, Fang and Gu, Chunbin and Leskovec, Jure and Choi, Yejin and de la Fuente, Cesar and Chen, Guangyong and others},
+  journal={bioRxiv},
+  pages={2025--09},
+  year={2025},
+  publisher={Cold Spring Harbor Laboratory}
+}
+```
